@@ -2,7 +2,7 @@
 Add here global page variables to use throughout your website.
 -->
 +++
-author = "Dirk Oliver Theis"
+author = ""
 mintoclevel = 2
 
 # Add here files or directories that should be ignored by Franklin, otherwise
@@ -21,5 +21,4 @@ website_url   = "https://kvantinformatsioon.ee/"
 <!--
 Add here global latex commands to use throughout your pages.
 -->
-\newcommand{\R}{\mathbb R}
-\newcommand{\scal}[1]{\langle #1 \rangle}
+\newcommand{\RR}{\mathbb R}

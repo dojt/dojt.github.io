@@ -1,4 +1,4 @@
-@def title = "Kvantinformatsioon.ee"
+@def title = "Franklin Example"
 @def tags = ["syntax", "code"]
 
 # How to use Franklin

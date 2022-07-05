@@ -1,5 +1,4 @@
 # Hi, there!
-    Dirk Oliver Theis
-    Assoc. Prof. Theoretical Computer Science
-    University of Tartu, Estonia
-[Homepage](https://quantum-computing.ut.ee/?page_id=292)
+[Dirk Oliver Theis](https://quantum-computing.ut.ee/?page_id=292)<br>
+Assoc. Prof. Theoretical Computer Science<br>
+University of Tartu, Estonia

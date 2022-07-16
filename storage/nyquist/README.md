@@ -15,6 +15,6 @@ This is supplementary material for the paper:
 
 * [Pluto-notebook as PDF](./nyquist-vs-banchi+crooks.jl.pdf)
 * [Pluto-notebook as static HTML](./nyquist-vs-banchi+crooks.jl.html)
-* [Pluto-notebook Julia source code]()
+* [Pluto-notebook Julia source code](nyquist-vs-banchi+crooks.jl)
 
 DOT, July 2022

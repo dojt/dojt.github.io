@@ -17,4 +17,6 @@ This is supplementary material for the paper:
 * [Pluto-notebook as static HTML](./nyquist-vs-banchi+crooks.jl.html)  (29MB)
 * [Pluto-notebook Julia source code](nyquist-vs-banchi+crooks.jl)
 
+---
+
 [Dirk Oliver Theis](https://quantum-computing.ut.ee/?page_id=292), July 2022

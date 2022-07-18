@@ -1,4 +1,4 @@
-# Pluto-notebooks for arXiv:2207.01587
+# Pluto-Notebooks for [arXiv:2207.01587](https://arxiv.org/abs/2207.01587)
 
 This is supplementary material for the paper:
 
@@ -17,4 +17,6 @@ This is supplementary material for the paper:
 * [Pluto-notebook as static HTML](./nyquist-vs-banchi+crooks.jl.html)  (29MB)
 * [Pluto-notebook Julia source code](nyquist-vs-banchi+crooks.jl)
 
-DOT, July 2022
+---
+
+[Dirk Oliver Theis](https://quantum-computing.ut.ee/?page_id=292), July 2022

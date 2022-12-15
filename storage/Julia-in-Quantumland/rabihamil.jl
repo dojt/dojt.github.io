@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.17
+# v0.19.18
 
 using Markdown
 using InteractiveUtils
@@ -709,9 +709,9 @@ version = "0.21.0+0"
 
 [[deps.Glib_jll]]
 deps = ["Artifacts", "Gettext_jll", "JLLWrappers", "Libdl", "Libffi_jll", "Libiconv_jll", "Libmount_jll", "PCRE2_jll", "Pkg", "Zlib_jll"]
-git-tree-sha1 = "fb83fbe02fe57f2c068013aa94bcdf6760d3a7a7"
+git-tree-sha1 = "d3b3624125c1474292d0d8ed0f65554ac37ddb23"
 uuid = "7746bdde-850d-59dc-9ae8-88ece973131d"
-version = "2.74.0+1"
+version = "2.74.0+2"
 
 [[deps.Graphite2_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -902,9 +902,9 @@ version = "1.42.0+0"
 
 [[deps.Libiconv_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
-git-tree-sha1 = "42b62845d70a619f063a7da093d995ec8e15e778"
+git-tree-sha1 = "c7cb1f5d892775ba13767a87c7ada0b980ea0a71"
 uuid = "94ce4f54-9a6c-5748-9c1c-f9c7231a4531"
-version = "1.16.1+1"
+version = "1.16.1+2"
 
 [[deps.Libmount_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -1568,8 +1568,6 @@ version = "1.4.1+0"
 # ╟─bbc40d0c-267e-4cbd-8e60-f6dc4448fa03
 # ╟─6de9e496-1d81-4754-8970-717e36e838d5
 # ╟─513e576d-8699-41da-a220-cf2b7449b760
-# ╟─a808fe4a-4a68-44b6-bc1d-724bb725b8a1
-# ╠═b5359d4b-1c72-4691-9198-073538deb8c6
 # ╠═3978898a-39b9-4ffb-9bf6-25a8cc11400b
 # ╠═1c942ba5-bdec-4064-8ab7-99bcc99f6a82
 # ╟─e9dd854f-bd79-48fb-8c85-b8616542b3fe

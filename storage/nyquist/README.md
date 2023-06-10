@@ -23,10 +23,8 @@ The static HTML has a button in the top right corner that allows you to edit the
 
 * Install Julia from [julialang.org](https://julialang.org)
 * Start Julia
-* Hit the ']' key to enter pkg mode
-* Enter "add Pluto"
-* Hit backspace to leave pkg mode
 * Enter "using Pluto"
+  * If necessary, confirm download and installation of the package.
 * Enter "Pluto.run()" -- a page in your default browser will be opened.
 
 ---

@@ -1,4 +1,4 @@
-# Pluto-Notebooks for [arXiv:2207.01587](https://arxiv.org/abs/2207.01587)
+# Pluto-Notebooks for [arXiv:2207.01587](https://doi.org/10.22331/q-2023-07-11-1052)
 
 This is supplementary material for the paper:
 
@@ -7,9 +7,12 @@ This is supplementary material for the paper:
   title =        {``Proper'' Shift Rules for Derivatives of
                   Perturbed-Parametric Quantum Evolutions},
   author =       {Theis, Dirk Oliver},
-  journal =      {Preprint},
   note =         {arXiv:2207.01587},
-  year =         2022
+  journal =      {Quantum},
+  volume =       7,
+  pages =        1052,
+  year =         2023,
+  DOI =          {10.22331/q-2023-07-11-1052}
 }
 ```
 

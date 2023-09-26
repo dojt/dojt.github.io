@@ -63,7 +63,15 @@
 -----
 
 
-* Miscellaneous
+* NeQst
+
+   UTartu is part of a project called [[https://www.sintef.no/en/projects/2022/neqst-quantum-computing-applied-to-industrial-optimization-problems/][NeQst]] that includes 5 industrial partners, with the aim to assess the
+   feasibility of industrial optimization on pre-fault-tolerant quantum computers[fn:1].  The approach taken is
+   closely linked to quantum neural networks.
+
+   Specifically, one of UTartu's roles is to minimize the detrimental influence of statistical noise in the
+   measurement results on the algorithm performance.
+
 -----
 ** *»SiPSA«* -- Gradients in quantum neural networks
 
@@ -101,6 +109,9 @@
 
 -----
 
+
+* Miscellaneous
+-----
 ** *»Finite«* -- Finite non-commutative Fourier transformation
 
      #+BEGIN_CENTER
@@ -271,7 +282,8 @@
 -----
 
 
-* EOOF
+* Footnotes
+[fn:1] Spoiler alert: Works like shit.
 # Local Variables:
 # fill-column: 115
 # End:

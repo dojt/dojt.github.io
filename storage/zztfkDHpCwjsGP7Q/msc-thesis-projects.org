@@ -14,6 +14,7 @@
    UTartu is part of an EU effort to build hardware, enabling software (firmware, OS, compiler), and application
    software for a first large-scale made-in-EU quantum computer: [[https://opensuperqplus.eu/][OpenSuperQ]].
 
+-----
 ** *»Compiler«* -- Quantum-Compiler Construction
 
      The student's contribution will be to develop in Python, based on existing open-source code by IBM, Google,
@@ -21,12 +22,22 @@
      middleware.
 
      + Computer Science ::
-       - Area:                   Quantum circuits manipulation
-       - Required background:    Content of FunQ (LTFY.04.012 /Fundamentals of Quantum Computing/)
-       - Recommended background: Compiler construction (e.g., LTAT.03.006, /Automaadid, keeled ja translaatorid/)
+       - Area:                   /Quantum circuits manipulation/
+       - Required background:    /Content of FunQ (LTFY.04.012 Fundamentals of Quantum Computing)/
+       - Recommended background: /Compiler construction (e.g., LTAT.03.006, Automaadid, keeled ja translaatorid)/
 
      + Programming ::
        - Python (incl. Qiskit)
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Dirk Oliver Theis
+     Assoc. Prof. Theoretical Computer Science
+     dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
 
 ** *»Verify«* -- Verification
 
@@ -34,14 +45,26 @@
      correct functioning of the quantum computer stack.
 
      + Computer Science ::
-       - Area:                   Quantum information processing
-       - Required background:    Content of FunQ (LTFY.04.012 /Fundamentals of Quantum Computing/)
-       - Recommended background: Basic stabilizer theory (e.g., read § 10.5 in Nielsen-Chuang)
+       - Area:                   /Quantum information processing/
+       - Required background:    /Content of FunQ (LTFY.04.012 Fundamentals of Quantum Computing)/
+       - Recommended background: /Basic stabilizer theory (e.g., read § 10.5 in Nielsen-Chuang)/
 
      + Programming ::
        - Python (incl. Qiskit)
 
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Dirk Oliver Theis
+     Assoc. Prof. Theoretical Computer Science
+     dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
+
+
 * Miscellaneous
+-----
 ** *»SiPSA«* -- Gradients in quantum neural networks
 
      One bottleneck for building artificial neural networks that process quantum information is the high cost of
@@ -54,10 +77,10 @@
      that factor to $O(1)$ -- and compare it to clever implementations of two other methods.  A number of
      technological hurdles have to be overcome.
 
-     + Math ::
-       - Area:                   Stochastic optimization of smooth functions
-       - Required background:    Continuous optimization; Statistics
-       - Recommended background: Fourier analysis
+     + Mathematics ::
+       - Area:                   /Stochastic optimization of smooth functions/
+       - Required background:    /Continuous optimization; Statistics/
+       - Recommended background: /Fourier analysis/
 
      + Programming ::
        - Either:   Julia ("Julia is the new MATLAB"), preferred;
@@ -67,6 +90,16 @@
        quantum computations with tons of thousands of parameters, and be run tens of thousands of times -- which
        may not be feasible in Python.  Julia, on the other hand, is about as fast as un-optimized C code to begin
        with, and it also makes it easy to deploy multi-core SIMD (GPU) parallelization.
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Dirk Oliver Theis
+     Assoc. Prof. Theoretical Computer Science
+     dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
 
 ** *»Finite«* -- Finite non-commutative Fourier transformation
 
@@ -80,16 +113,26 @@
 
      The method is confidential intellectual property, and all information related to it is sensitive.
 
-     + Math ::
-       - Area:                   Analysis on Matrix Lie-Groups
-       - Required background:    Fourier analysis
-       - Recommended background: Representation theory of Lie groups
+     + Mathematics ::
+       - Area:                   /Analysis on Matrix Lie-Groups/
+       - Required background:    /Fourier analysis/
+       - Recommended background: /Representation theory of Lie groups/
 
      + Programming ::
        Student's choice:
 
        - Either Julia programming language ("Julia is the new MATLAB")
        - Or Python with Qiskit
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Dirk Oliver Theis
+     Assoc. Prof. Theoretical Computer Science
+     dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
 
 ** *»Clouds«* -- Data structures for point clouds with density-queries
 
@@ -99,6 +142,14 @@
 
      The use-case in quantum information of the following thesis projects is confidential intellectual property,
      and all information related to the use-case and the connection to these projects are sensitive.
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Dirk Oliver Theis
+     Assoc. Prof. Theoretical Computer Science
+     dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
 
 **** »Clouds-DS«
 
@@ -111,8 +162,8 @@
      intellectual property protection.
 
      + Computer Science ::
-       - Area:                   Advanced data structures & algorithms
-       - Recommended background: /Theory/ of algorithms and data structures
+       - Area:                   /Advanced data structures & algorithms/
+       - Recommended background: /Theory of algorithms and data structures/
 
        The project will include a theoretical analysis of space & time requirements.
 
@@ -129,12 +180,16 @@
      the theory component, of course.
 
      + Computer Science ::
-       - Area:                   Machine learning
+       - Area:                   /Machine learning/
 
      + Programming ::
        - Python
 
-* Eᴠɢᴇɴɪɪ: Mathematics of Quantum Information Processing
+-----
+
+
+* Mathematics of Quantum Information Processing
+-----
 ** *»Spectrum«* -- Fourier spectra of parametric unitaries
 
      The student's contribution will lie in generalizing a theorem about the Fourier spectra of certain smooth,
@@ -142,13 +197,23 @@
      dimension (function values are unitary matrices) to infinite dimension (function values are unitary operators
      on an infinite-dimensional Hilbert space).
 
-     + Math ::
-       - Area:                   Functional analysis
-       - Required background:    Fourier analysis
-       - Recommended background: Tempered distributions
+     + Mathematics ::
+       - Area:                   /Functional analysis/
+       - Required background:    /Fourier analysis/
+       - Recommended background: /Tempered distributions/
 
      + Programming ::
        %
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Evgenii Dolzhkov                    Dirk Oliver Theis
+     Cand. PhD                           Assoc. Prof. Theoretical Computer Science
+     evgenii.dolzhkov@ut.ee              dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
 
 ** *»Concentration«* -- Derivative-computing measures with strong concentration
 
@@ -168,20 +233,43 @@
      #+END_CENTER
      Any improvement of this condition will count as a generalization.
 
-     + Math ::
-       - Area:           Fourier analysis, functional analysis
+     + Mathematics ::
+       - Area:                   /Functional analysis/
+       - Required background:    /Fourier analysis/
+       - Recommended background: /Proof of the Paley-Wiener theorem/
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Evgenii Dolzhkov                    Dirk Oliver Theis
+     Cand. PhD                           Assoc. Prof. Theoretical Computer Science
+     evgenii.dolzhkov@ut.ee              dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
 
 ** *»Dirichlet«* -- Signs of modified Dirichlet kernels
       The student's contribution will *hopefully(!!)* lie in proving a conjecture about signs of modified Dirichlet
       kernels.
 
-      + Math ::
-        - Area:                   Classical analysis
-        - Recommended background: Fourier analysis
-        - Required:               Superior problem solving skills
+      + Mathematics ::
+        - Area:                   /Classical analysis/
+        - Recommended background: /Fourier analysis/
+        - Required:               /Superior problem solving skills/
 
       + Programming ::
         %
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Evgenii Dolzhkov                    Dirk Oliver Theis
+     Cand. PhD                           Assoc. Prof. Theoretical Computer Science
+     evgenii.dolzhkov@ut.ee              dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
+
 
 * EOOF
 # Local Variables:

@@ -27,7 +27,7 @@
        - Recommended background: /Compiler construction (e.g., [[https://courses.cs.ut.ee/2023/AKT][LTAT.03.006, Automaadid, keeled ja translaatorid]])/
 
      + Programming ::
-       - Python (incl. Qiskit)
+       - Python (incl. [[https://qiskit.org/][Qiskit]])
 
      _Supervision & Inquiries_
 
@@ -50,7 +50,7 @@
        - Recommended background: /Basic stabilizer theory (e.g., read § 10.5 in [[https://en.wikipedia.org/wiki/Quantum_Computation_and_Quantum_Information][Nielsen-Chuang]])/
 
      + Programming ::
-       - Python (incl. Qiskit)
+       - Python (incl. [[https://qiskit.org/][Qiskit]])
 
      _Supervision & Inquiries_
 
@@ -72,8 +72,8 @@
      evaluation, in the (currently proposed) quantum settings, the cost is higher by a factor between $\sqrt d$
      and $d$ (where $d$ is the number of parameters to be "trained").
 
-     The student's contribution will lie in writing code for and assessment of the »Simultaneous Perturbation
-     Stochastic Approximation« method for gradient estimates -- which, deceptively, seems to promise to reduce
+     The student's contribution will lie in writing code for and assessment of the »[[https://en.wikipedia.org/wiki/Simultaneous_perturbation_stochastic_approximation][Simultaneous Perturbation
+     Stochastic Approximation]]« method for gradient estimates -- which, deceptively, seems to promise to reduce
      that factor to $O(1)$ -- and compare it to clever implementations of two other methods.  A number of
      technological hurdles have to be overcome.
 
@@ -83,7 +83,7 @@
        - Recommended background: /Fourier analysis/
 
      + Programming ::
-       - Either:   Julia ("Julia is the new MATLAB"), preferred;
+       - Either:   [[https://julialang.org/][Julia]] ("Julia is the new MATLAB"), preferred;
        - Or:       Python.
 
        The student is free to choose the programming language.  The code will have to simulate parameterized
@@ -121,8 +121,8 @@
      + Programming ::
        Student's choice:
 
-       - Either Julia programming language ("Julia is the new MATLAB")
-       - Or Python with Qiskit
+       - Either [[https://julialang.org/][Julia]] programming language ("Julia is the new MATLAB")
+       - Or Python with [[https://qiskit.org/][Qiskit]]
 
      _Supervision & Inquiries_
 
@@ -168,7 +168,7 @@
        The project will include a theoretical analysis of space & time requirements.
 
      + Programming ::
-       - Either:   Julia ("Julia is the new MATLAB"), preferred;
+       - Either:   [[https://julialang.org/][Julia]] ("Julia is the new MATLAB"), preferred;
        - Or:       Python.
 
        The project will include an implementation of a simulation that mimicks the actual quantum-information

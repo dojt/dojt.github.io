@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-09-26 Tue 18:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MSc-Thesis Projects 2023</title>
+<meta name="author" content="Dirk Oliver Theis, University of Tartu, Estonia" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">MSc-Thesis Projects 2023</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4793af5">1. OpenSuperQ</a>
+<ul>
+<li><a href="#org16fb7a7">1.1. <b>»Compiler«</b> &#x2013; Quantum-Compiler Construction</a></li>
+<li><a href="#org7b89a8a">1.2. <b>»Verify«</b> &#x2013; Verification</a></li>
+</ul>
+</li>
+<li><a href="#org1c3aa2b">2. Miscellaneous</a>
+<ul>
+<li><a href="#org9ccd454">2.1. <b>»SiPSA«</b> &#x2013; Gradients in quantum neural networks</a></li>
+<li><a href="#org3867d2e">2.2. <b>»Finite«</b> &#x2013; Finite non-commutative Fourier transformation</a></li>
+<li><a href="#org466e058">2.3. <b>»Clouds«</b> &#x2013; Data structures for point clouds with density-queries</a></li>
+</ul>
+</li>
+<li><a href="#org59aa51c">3. Eᴠɢᴇɴɪɪ: Mathematics of Quantum Information Processing</a>
+<ul>
+<li><a href="#org9c4e650">3.1. <b>»Spectrum«</b> &#x2013; Fourier spectra of parametric unitaries</a></li>
+<li><a href="#org72ffe26">3.2. <b>»Concentration«</b> &#x2013; Derivative-computing measures with strong concentration</a></li>
+<li><a href="#org246bf24">3.3. <b>»Dirichlet«</b> &#x2013; Signs of modified Dirichlet kernels</a></li>
+</ul>
+</li>
+<li><a href="#org2a4f3be">4. EOOF</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4793af5" class="outline-2">
+<h2 id="org4793af5"><span class="section-number-2">1.</span> OpenSuperQ</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+UTartu is part of an EU effort to build hardware, enabling software (firmware, OS, compiler), and application
+software for a first large-scale made-in-EU quantum computer: <a href="https://opensuperqplus.eu/">OpenSuperQ</a>.
+</p>
+</div>
+
+<div id="outline-container-org16fb7a7" class="outline-3">
+<h3 id="org16fb7a7"><span class="section-number-3">1.1.</span> <b>»Compiler«</b> &#x2013; Quantum-Compiler Construction</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The student's contribution will be to develop in Python, based on existing open-source code by IBM, Google,
+etc, a compiler for quantum programs, that integrates with the planned OpenSuperQ operating system and
+middleware.
+</p>
+
+<dl class="org-dl">
+<dt>Computer Science</dt><dd><ul class="org-ul">
+<li>Area:                   Quantum circuits manipulation</li>
+<li>Required background:    Content of FunQ (LTFY.04.012 <i>Fundamentals of Quantum Computing</i>)</li>
+<li>Recommended background: Compiler construction (e.g., LTAT.03.006, <i>Automaadid, keeled ja translaatorid</i>)</li>
+</ul></dd>
+
+<dt>Programming</dt><dd><ul class="org-ul">
+<li>Python (incl. Qiskit)</li>
+</ul></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org7b89a8a" class="outline-3">
+<h3 id="org7b89a8a"><span class="section-number-3">1.2.</span> <b>»Verify«</b> &#x2013; Verification</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The student's contribution will be to implement and assess the quality of methods for the verification of the
+correct functioning of the quantum computer stack.
+</p>
+
+<dl class="org-dl">
+<dt>Computer Science</dt><dd><ul class="org-ul">
+<li>Area:                   Quantum information processing</li>
+<li>Required background:    Content of FunQ (LTFY.04.012 <i>Fundamentals of Quantum Computing</i>)</li>
+<li>Recommended background: Basic stabilizer theory (e.g., read § 10.5 in Nielsen-Chuang)</li>
+</ul></dd>
+
+<dt>Programming</dt><dd><ul class="org-ul">
+<li>Python (incl. Qiskit)</li>
+</ul></dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1c3aa2b" class="outline-2">
+<h2 id="org1c3aa2b"><span class="section-number-2">2.</span> Miscellaneous</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org9ccd454" class="outline-3">
+<h3 id="org9ccd454"><span class="section-number-3">2.1.</span> <b>»SiPSA«</b> &#x2013; Gradients in quantum neural networks</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+One bottleneck for building artificial neural networks that process quantum information is the high cost of
+computing gradients: While in classical neural networks, gradient computation is as costly as function
+evaluation, in the (currently proposed) quantum settings, the cost is higher by a factor between \(\sqrt d\)
+and \(d\) (where \(d\) is the number of parameters to be "trained").
+</p>
+
+<p>
+The student's contribution will lie in writing code for and assessment of the »Simultaneous Perturbation
+Stochastic Approximation« method for gradient estimates &#x2013; which, deceptively, seems to promise to reduce
+that factor to \(O(1)\) &#x2013; and compare it to clever implementations of two other methods.  A number of
+technological hurdles have to be overcome.
+</p>
+
+<dl class="org-dl">
+<dt>Math</dt><dd><ul class="org-ul">
+<li>Area:                   Stochastic optimization of smooth functions</li>
+<li>Required background:    Continuous optimization; Statistics</li>
+<li>Recommended background: Fourier analysis</li>
+</ul></dd>
+
+<dt>Programming</dt><dd><ul class="org-ul">
+<li>Either:   Julia ("Julia is the new MATLAB"), preferred;</li>
+<li>Or:       Python.</li>
+</ul>
+
+<p>
+The student is free to choose the programming language.  The code will have to simulate parameterized
+quantum computations with tons of thousands of parameters, and be run tens of thousands of times &#x2013; which
+may not be feasible in Python.  Julia, on the other hand, is about as fast as un-optimized C code to begin
+with, and it also makes it easy to deploy multi-core SIMD (GPU) parallelization.
+</p></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org3867d2e" class="outline-3">
+<h3 id="org3867d2e"><span class="section-number-3">2.2.</span> <b>»Finite«</b> &#x2013; Finite non-commutative Fourier transformation</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-center">
+<p>
+<b>CONFIDENTIAL!</b>
+</p>
+</div>
+
+<p>
+The student's contribution will lie in implementing and running experiments with a quantum information
+processing method.  The <i>math</i> content of the project is considerable: It includes non-commutative Fourier
+analysis (from the representation theory of compact non-Abelian groups), and working with finite groups.
+</p>
+
+<p>
+The method is confidential intellectual property, and all information related to it is sensitive.
+</p>
+
+<dl class="org-dl">
+<dt>Math</dt><dd><ul class="org-ul">
+<li>Area:                   Analysis on Matrix Lie-Groups</li>
+<li>Required background:    Fourier analysis</li>
+<li>Recommended background: Representation theory of Lie groups</li>
+</ul></dd>
+
+<dt>Programming</dt><dd>Student's choice:
+
+<ul class="org-ul">
+<li>Either Julia programming language ("Julia is the new MATLAB")</li>
+<li>Or Python with Qiskit</li>
+</ul></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org466e058" class="outline-3">
+<h3 id="org466e058"><span class="section-number-3">2.3.</span> <b>»Clouds«</b> &#x2013; Data structures for point clouds with density-queries</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-center">
+<p>
+<b>CONFIDENTIAL!</b>
+</p>
+</div>
+
+<p>
+The use-case in quantum information of the following thesis projects is confidential intellectual property,
+and all information related to the use-case and the connection to these projects are sensitive.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orged144d7"></a>»Clouds-DS«<br />
+<div class="outline-text-5" id="text-2-3-0-1">
+<p>
+The student's contribution will consist in researching (classical-computer) data structures that allow to
+store large sets of high-dimensional points, with the requirement that, after storage and potentially
+post-processing, regions of high density (many points per volume) can be retrieved from the data structure.
+The supervisor is, at the time of writing this, not aware whether such data structures exist.
+</p>
+
+<p>
+The use-case in quantum information of this type of data structures are confidential in the sense of
+intellectual property protection.
+</p>
+
+<dl class="org-dl">
+<dt>Computer Science</dt><dd><ul class="org-ul">
+<li>Area:                   Advanced data structures &amp; algorithms</li>
+<li>Recommended background: <i>Theory</i> of algorithms and data structures</li>
+</ul>
+
+<p>
+The project will include a theoretical analysis of space &amp; time requirements.
+</p></dd>
+
+<dt>Programming</dt><dd><ul class="org-ul">
+<li>Either:   Julia ("Julia is the new MATLAB"), preferred;</li>
+<li>Or:       Python.</li>
+</ul>
+
+<p>
+The project will include an implementation of a simulation that mimicks the actual quantum-information
+use-case &#x2013; a Python implementation <i>might</i> be too slow for that.
+</p></dd>
+</dl>
+</div>
+</li>
+
+<li><a id="org7c3c3c8"></a>»Clouds-NN«<br />
+<div class="outline-text-5" id="text-2-3-0-2">
+<p>
+Same as above, except where identifying high density regions is based on Neural Networks &#x2013; and hence without
+the theory component, of course.
+</p>
+
+<dl class="org-dl">
+<dt>Computer Science</dt><dd><ul class="org-ul">
+<li>Area:                   Machine learning</li>
+</ul></dd>
+
+<dt>Programming</dt><dd><ul class="org-ul">
+<li>Python</li>
+</ul></dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org59aa51c" class="outline-2">
+<h2 id="org59aa51c"><span class="section-number-2">3.</span> Eᴠɢᴇɴɪɪ: Mathematics of Quantum Information Processing</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org9c4e650" class="outline-3">
+<h3 id="org9c4e650"><span class="section-number-3">3.1.</span> <b>»Spectrum«</b> &#x2013; Fourier spectra of parametric unitaries</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+The student's contribution will lie in generalizing a theorem about the Fourier spectra of certain smooth,
+bounded, non-\(\mathcal C_0\) functions (➜ basic tempered distribution theory probably necessary) from finite
+dimension (function values are unitary matrices) to infinite dimension (function values are unitary operators
+on an infinite-dimensional Hilbert space).
+</p>
+
+<dl class="org-dl">
+<dt>Math</dt><dd><ul class="org-ul">
+<li>Area:                   Functional analysis</li>
+<li>Required background:    Fourier analysis</li>
+<li>Recommended background: Tempered distributions</li>
+</ul></dd>
+
+<dt>Programming</dt><dd>%</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org72ffe26" class="outline-3">
+<h3 id="org72ffe26"><span class="section-number-3">3.2.</span> <b>»Concentration«</b> &#x2013; Derivative-computing measures with strong concentration</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+The student's contribution will lie in trying to generalize a theorem about the non-existence of (signed /
+complex) Borel measures \(\mu\) with
+</p>
+<div class="org-center">
+<p>
+\[
+                  \int f\,d\mu = f'(0) \quad\forall f\in L^2(\mathbb R) \text{ with } \mathrm{Supp\,}\hat f \subseteq [-1/2,+1/2].
+                  \]
+</p>
+</div>
+<p>
+The existing theorem states that such a \(\mu\) cannot have exponential concentration around 0, i.e., no such
+\(\mu\) satisfies
+</p>
+<div class="org-center">
+<p>
+\[
+                  \int_{-R}^{+R} d\mu = e^{-\Omega(R)}.
+                  \]
+</p>
+</div>
+<p>
+Any improvement of this condition will count as a generalization.
+</p>
+
+<dl class="org-dl">
+<dt>Math</dt><dd><ul class="org-ul">
+<li>Area:           Fourier analysis, functional analysis</li>
+</ul></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org246bf24" class="outline-3">
+<h3 id="org246bf24"><span class="section-number-3">3.3.</span> <b>»Dirichlet«</b> &#x2013; Signs of modified Dirichlet kernels</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+The student's contribution will <b>hopefully(!!)</b> lie in proving a conjecture about signs of modified Dirichlet
+kernels.
+</p>
+
+<dl class="org-dl">
+<dt>Math</dt><dd><ul class="org-ul">
+<li>Area:                   Classical analysis</li>
+<li>Recommended background: Fourier analysis</li>
+<li>Required:               Superior problem solving skills</li>
+</ul></dd>
+
+<dt>Programming</dt><dd>%</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2a4f3be" class="outline-2">
+<h2 id="org2a4f3be"><span class="section-number-2">4.</span> EOOF</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: Tue Sep 26 18:39:41 EEST 2023</p>
+<p class="author">Author: Dirk Oliver Theis, University of Tartu, Estonia</p>
+<p class="date">Created: 2023-09-26 Tue 18:40</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

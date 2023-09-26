@@ -23,8 +23,8 @@
 
      + Computer Science ::
        - Area:                   /Quantum circuits manipulation/
-       - Required background:    /Content of FunQ (LTFY.04.012 Fundamentals of Quantum Computing)/
-       - Recommended background: /Compiler construction (e.g., LTAT.03.006, Automaadid, keeled ja translaatorid)/
+       - Required background:    /Content of FunQ ([[https://ois2.ut.ee/#/courses/LTFY.04.012/version/d9ad2597-0612-5609-960c-c2340984c793/details][LTFY.04.012 Fundamentals of Quantum Computing]])/
+       - Recommended background: /Compiler construction (e.g., [[https://courses.cs.ut.ee/2023/AKT][LTAT.03.006, Automaadid, keeled ja translaatorid]])/
 
      + Programming ::
        - Python (incl. Qiskit)
@@ -46,8 +46,8 @@
 
      + Computer Science ::
        - Area:                   /Quantum information processing/
-       - Required background:    /Content of FunQ (LTFY.04.012 Fundamentals of Quantum Computing)/
-       - Recommended background: /Basic stabilizer theory (e.g., read § 10.5 in Nielsen-Chuang)/
+       - Required background:    /Content of FunQ ([[https://ois2.ut.ee/#/courses/LTFY.04.012/version/d9ad2597-0612-5609-960c-c2340984c793/details][LTFY.04.012 Fundamentals of Quantum Computing]])/
+       - Recommended background: /Basic stabilizer theory (e.g., read § 10.5 in [[https://en.wikipedia.org/wiki/Quantum_Computation_and_Quantum_Information][Nielsen-Chuang]])/
 
      + Programming ::
        - Python (incl. Qiskit)

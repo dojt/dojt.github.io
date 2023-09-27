@@ -110,9 +110,92 @@
 -----
 
 
+* Mathematics of Quantum Information Processing
+-----
+** *»Spectrum«* -- Fourier spectra of parametric unitaries
+
+     The student's contribution will lie in generalizing a theorem about the Fourier spectra of certain smooth,
+     bounded, non-$\mathcal C_0$ functions (➜ basic tempered distribution theory probably necessary) from finite
+     dimension (function values are unitary matrices) to infinite dimension (function values are unitary operators
+     on an infinite-dimensional Hilbert space).
+
+     + Mathematics ::
+       - Area:                   /Functional analysis/
+       - Required background:    /Fourier analysis/
+       - Recommended background: /Tempered distributions/
+
+     + Programming ::
+       %
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Evgenii Dolzhkov                    Dirk Oliver Theis
+     Cand. PhD                           Assoc. Prof. Theoretical Computer Science
+     evgenii.dolzhkov@ut.ee              dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
+
+** *»Concentration«* -- Derivative-computing measures with strong concentration
+
+     The student's contribution will lie in trying to generalize a theorem about the non-existence of (signed /
+     complex) Borel measures $\mu$ with
+     #+BEGIN_CENTER
+                  \[
+                  \int f\,d\mu = f'(0) \quad\forall f\in L^2(\mathbb R) \text{ with } \mathrm{Supp\,}\hat f \subseteq [-1/2,+1/2].
+                  \]
+     #+END_CENTER
+     The existing theorem states that such a $\mu$ cannot have exponential concentration around 0, i.e., no such
+     $\mu$ satisfies
+     #+BEGIN_CENTER
+                  \[
+                  \int_{-R}^{+R} d\mu = e^{-\Omega(R)}.
+                  \]
+     #+END_CENTER
+     Any improvement of this condition will count as a generalization.
+
+     + Mathematics ::
+       - Area:                   /Functional analysis/
+       - Required background:    /Fourier analysis/
+       - Recommended background: /Proof of the Paley-Wiener theorem/
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Evgenii Dolzhkov                    Dirk Oliver Theis
+     Cand. PhD                           Assoc. Prof. Theoretical Computer Science
+     evgenii.dolzhkov@ut.ee              dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
+
+** *»Dirichlet«* -- Signs of modified Dirichlet kernels
+      The student's contribution will *hopefully(!!)* lie in proving a conjecture about signs of modified Dirichlet
+      kernels.
+
+      + Mathematics ::
+        - Area:                   /Classical analysis/
+        - Recommended background: /Fourier analysis/
+        - Required:               /Superior problem solving skills/
+
+      + Programming ::
+        %
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Evgenii Dolzhkov                    Dirk Oliver Theis
+     Cand. PhD                           Assoc. Prof. Theoretical Computer Science
+     evgenii.dolzhkov@ut.ee              dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
+
+
 * Miscellaneous
 -----
-** *»Finite«* -- Finite non-commutative Fourier transformation
+** *»Lie«* -- Finite non-commutative Fourier transformation
 
      #+BEGIN_CENTER
      *CONFIDENTIAL!*
@@ -195,89 +278,6 @@
 
      + Programming ::
        - Python
-
------
-
-
-* Mathematics of Quantum Information Processing
------
-** *»Spectrum«* -- Fourier spectra of parametric unitaries
-
-     The student's contribution will lie in generalizing a theorem about the Fourier spectra of certain smooth,
-     bounded, non-$\mathcal C_0$ functions (➜ basic tempered distribution theory probably necessary) from finite
-     dimension (function values are unitary matrices) to infinite dimension (function values are unitary operators
-     on an infinite-dimensional Hilbert space).
-
-     + Mathematics ::
-       - Area:                   /Functional analysis/
-       - Required background:    /Fourier analysis/
-       - Recommended background: /Tempered distributions/
-
-     + Programming ::
-       %
-
-     _Supervision & Inquiries_
-
-     #+BEGIN_EXAMPLE
-     Evgenii Dolzhkov                    Dirk Oliver Theis
-     Cand. PhD                           Assoc. Prof. Theoretical Computer Science
-     evgenii.dolzhkov@ut.ee              dotheis.UTartu@gmail.com
-     #+END_EXAMPLE
-
------
-
-** *»Concentration«* -- Derivative-computing measures with strong concentration
-
-     The student's contribution will lie in trying to generalize a theorem about the non-existence of (signed /
-     complex) Borel measures $\mu$ with
-     #+BEGIN_CENTER
-                  \[
-                  \int f\,d\mu = f'(0) \quad\forall f\in L^2(\mathbb R) \text{ with } \mathrm{Supp\,}\hat f \subseteq [-1/2,+1/2].
-                  \]
-     #+END_CENTER
-     The existing theorem states that such a $\mu$ cannot have exponential concentration around 0, i.e., no such
-     $\mu$ satisfies
-     #+BEGIN_CENTER
-                  \[
-                  \int_{-R}^{+R} d\mu = e^{-\Omega(R)}.
-                  \]
-     #+END_CENTER
-     Any improvement of this condition will count as a generalization.
-
-     + Mathematics ::
-       - Area:                   /Functional analysis/
-       - Required background:    /Fourier analysis/
-       - Recommended background: /Proof of the Paley-Wiener theorem/
-
-     _Supervision & Inquiries_
-
-     #+BEGIN_EXAMPLE
-     Evgenii Dolzhkov                    Dirk Oliver Theis
-     Cand. PhD                           Assoc. Prof. Theoretical Computer Science
-     evgenii.dolzhkov@ut.ee              dotheis.UTartu@gmail.com
-     #+END_EXAMPLE
-
------
-
-** *»Dirichlet«* -- Signs of modified Dirichlet kernels
-      The student's contribution will *hopefully(!!)* lie in proving a conjecture about signs of modified Dirichlet
-      kernels.
-
-      + Mathematics ::
-        - Area:                   /Classical analysis/
-        - Recommended background: /Fourier analysis/
-        - Required:               /Superior problem solving skills/
-
-      + Programming ::
-        %
-
-     _Supervision & Inquiries_
-
-     #+BEGIN_EXAMPLE
-     Evgenii Dolzhkov                    Dirk Oliver Theis
-     Cand. PhD                           Assoc. Prof. Theoretical Computer Science
-     evgenii.dolzhkov@ut.ee              dotheis.UTartu@gmail.com
-     #+END_EXAMPLE
 
 -----
 

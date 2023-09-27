@@ -195,6 +195,39 @@
 
 * Miscellaneous
 -----
+** *»Lie«* -- Non-commutative Fourier transformation
+
+     #+BEGIN_CENTER
+     *CONFIDENTIAL!*
+     #+END_CENTER
+
+     The student's contribution will lie in implementing and running experiments with a quantum information
+     processing method.  The /math/ content of the project is considerable: It includes non-commutative Fourier
+     analysis (from the representation theory of compact non-Abelian groups).
+
+     The method is confidential intellectual property, and all information related to it is sensitive.
+
+     + Mathematics ::
+       - Area:                   /Analysis on Matrix Lie-Groups/
+       - Required background:    /Fourier analysis/
+       - Recommended background: /Representation theory of Lie groups/
+
+     + Programming ::
+       Student's choice:
+
+       - Either [[https://julialang.org/][Julia]] programming language ("Julia is the new MATLAB")
+       - Or Python with [[https://qiskit.org/][Qiskit]]
+
+     _Supervision & Inquiries_
+
+     #+BEGIN_EXAMPLE
+     Dirk Oliver Theis
+     Assoc. Prof. Theoretical Computer Science
+     dotheis.UTartu@gmail.com
+     #+END_EXAMPLE
+
+-----
+
 ** *»Clouds«* -- Data structures for point clouds with density-queries
 
      #+BEGIN_CENTER

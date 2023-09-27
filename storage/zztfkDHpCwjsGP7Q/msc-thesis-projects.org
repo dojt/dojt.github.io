@@ -39,7 +39,7 @@
 
 -----
 
-** *»Verify«* -- Verification
+** *»Verify«* -- Verification of the software stack
 
      The student's contribution will be to implement and assess the quality of methods for the verification of the
      correct functioning of the quantum computer stack.

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-03-06 Wed 16:19 -->
+<!-- 2024-03-07 Thu 18:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>"Shift Rule for Gradient Determination in Parameterised Quantum Evolutions" — Whitepaper</title>
@@ -201,41 +201,50 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org43ce273">1. Introduction</a></li>
-<li><a href="#orge7b307a">2. Background</a>
+<li><a href="#orgdb4f3fa">1. Introduction</a></li>
+<li><a href="#orga8694f0">2. Background</a>
 <ul>
-<li><a href="#org8e3e281">2.1. Gradients of parameterized quantum evolutions &#x2014; why?</a>
+<li><a href="#org04f7ca5">2.1. Gradients of parameterized quantum evolutions &#x2014; why?</a>
 <ul>
-<li><a href="#org9128238">2.1.1. Quantum Machine Learning</a></li>
-<li><a href="#org99afe52">2.1.2. Combinatorial Optimization</a></li>
-<li><a href="#orgfbd5a86">2.1.3. Probably not applicable: Quantum chemistry</a></li>
+<li><a href="#org91a50a4">2.1.1. Quantum Machine Learning</a></li>
+<li><a href="#orgba11891">2.1.2. Combinatorial Optimization</a></li>
+<li><a href="#orgc144193">2.1.3. Probably not applicable: Quantum chemistry</a></li>
 </ul>
 </li>
-<li><a href="#orgf24fcd7">2.2. Gradients of parameterized quantum evolutions &#x2014; how?</a>
+<li><a href="#org597fc93">2.2. Gradients of parameterized quantum evolutions &#x2014; how?</a>
 <ul>
-<li><a href="#org22e2021">2.2.1. Symmetric Difference Quotient (SDQ)</a></li>
-<li><a href="#orgd57f4b5">2.2.2. Shift rules</a></li>
-<li><a href="#org53da42e">2.2.3. Banchi-Crooks' method</a></li>
-<li><a href="#orgbbc3136">2.2.4. Simultaneous Perturbation Stochastic Approximation (SPSA)</a></li>
-<li><a href="#orgf926028">2.2.5. Conclusion</a></li>
+<li><a href="#orgcec8a75">2.2.1. Symmetric Difference Quotient (SDQ)</a></li>
+<li><a href="#orga7780a8">2.2.2. Shift rules</a></li>
+<li><a href="#orgc12e7c3">2.2.3. Banchi-Crooks' method</a></li>
+<li><a href="#org56b85c1">2.2.4. Simultaneous Perturbation Stochastic Approximation (SPSA)</a></li>
+<li><a href="#org8db9499">2.2.5. Conclusion</a></li>
 </ul>
 </li>
-<li><a href="#orgc5be573">2.3. Analog quantum computers (aka quantum simulators)</a>
+<li><a href="#orge862161">2.3. Analog quantum computers (aka quantum simulators)</a>
 <ul>
-<li><a href="#org819630d">2.3.1. Rydberg atom arrays and the Rydberg Blockade                                  </a></li>
-<li><a href="#org86ac3f7">2.3.2. Other analog simulators</a></li>
+<li><a href="#org4570d7f">2.3.1. Rydberg atom arrays and the Rydberg Blockade                                  </a></li>
+<li><a href="#org7396352">2.3.2. Other analog simulators</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org924f9b2">3. <span class="todo TODO">TODO</span> How is my invention better than the other methods?</a></li>
-<li><a href="#orgcab9aae">4. Bibliography</a></li>
+<li><a href="#org37a6c2e">3. Numerical simulations</a>
+<ul>
+<li><a href="#orge6f69a9">3.1. Comparison with Banchi-Crooks</a></li>
+<li><a href="#org9b3fada">3.2. Complementarity with Symmetric Difference Quotients</a>
+<ul>
+<li><a href="#orgb39ba3c">3.2.1. Hardware-software co-design</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org7bcb045">4. Bibliography</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org43ce273" class="outline-2">
-<h2 id="org43ce273"><span class="section-number-2">1.</span> Introduction</h2>
+<div id="outline-container-orgdb4f3fa" class="outline-2">
+<h2 id="orgdb4f3fa"><span class="section-number-2">1.</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Most of the currently dominant proposals for useful near-term (i.e., pre-fault-tolerant) quantum computing make
@@ -252,7 +261,7 @@ states that are of scientific interest, or they use variational approaches.
 </p>
 
 <p>
-The invention (<a href="#citeproc_bib_item_6">Theis 2022</a>) that is discussed in this text pertains to making variational approaches
+The invention (<a href="#citeproc_bib_item_6">Theis 2022a</a>) that is discussed in this text pertains to making variational approaches
 on <i>analog quantum computers</i> (aka "quantum simulators") more efficient, by speeding up the computations of
 <i>gradients</i>, which are used to train the parameters.
 </p>
@@ -266,8 +275,8 @@ numerical simulations.
 </div>
 
 
-<div id="outline-container-orge7b307a" class="outline-2">
-<h2 id="orge7b307a"><span class="section-number-2">2.</span> Background</h2>
+<div id="outline-container-orga8694f0" class="outline-2">
+<h2 id="orga8694f0"><span class="section-number-2">2.</span> Background</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 With a view towards the applicability of the invention, we firstly by discussing the types of commercial
@@ -276,12 +285,12 @@ methods.  Finally, we discuss the analog quantum computers, as the hardware doma
 </p>
 </div>
 
-<div id="outline-container-org8e3e281" class="outline-3">
-<h3 id="org8e3e281"><span class="section-number-3">2.1.</span> Gradients of parameterized quantum evolutions &#x2014; why?</h3>
+<div id="outline-container-org04f7ca5" class="outline-3">
+<h3 id="org04f7ca5"><span class="section-number-3">2.1.</span> Gradients of parameterized quantum evolutions &#x2014; why?</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-org9128238" class="outline-4">
-<h4 id="org9128238"><span class="section-number-4">2.1.1.</span> Quantum Machine Learning</h4>
+<div id="outline-container-org91a50a4" class="outline-4">
+<h4 id="org91a50a4"><span class="section-number-4">2.1.1.</span> Quantum Machine Learning</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <p>
 In the classical world, training a neural network amounts to optimizing the parameters it comprises in such a
@@ -318,8 +327,8 @@ learning.  Some of them are tailored to analog quantum computers &#x2014; making
 </div>
 </div>
 
-<div id="outline-container-org99afe52" class="outline-4">
-<h4 id="org99afe52"><span class="section-number-4">2.1.2.</span> Combinatorial Optimization</h4>
+<div id="outline-container-orgba11891" class="outline-4">
+<h4 id="orgba11891"><span class="section-number-4">2.1.2.</span> Combinatorial Optimization</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <p>
 The most promising proposals to solving combinatorial optimization problems on noisy quantum computers encode
@@ -334,13 +343,13 @@ For that training, gradients are typically used.
 <p>
 Combinatorial optimization problems which require constraints (i.e., almost all) are more difficult to map
 onto a Hamiltonian.  Luckily though, in analog quantum computing, sometimes QAOA-approaches can be combined
-with "natural" constraints that are included in the system Hamiltonian; see the discussion about the <a href="#org2827d1d">2.3.1</a> below &#x2014; this is where our method can speed up gradient computations.
+with "natural" constraints that are included in the system Hamiltonian; see the discussion about the <a href="#org2be78b4">2.3.1</a> below &#x2014; this is where our method can speed up gradient computations.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfbd5a86" class="outline-4">
-<h4 id="orgfbd5a86"><span class="section-number-4">2.1.3.</span> Probably not applicable: Quantum chemistry</h4>
+<div id="outline-container-orgc144193" class="outline-4">
+<h4 id="orgc144193"><span class="section-number-4">2.1.3.</span> Probably not applicable: Quantum chemistry</h4>
 <div class="outline-text-4" id="text-2-1-3">
 <p>
 The third large type of use-cases for parameterized quantum evolutions is quantum-computer chemistry, based,
@@ -352,8 +361,8 @@ gradient speed-ups have too small an effect.
 </div>
 </div>
 
-<div id="outline-container-orgf24fcd7" class="outline-3">
-<h3 id="orgf24fcd7"><span class="section-number-3">2.2.</span> Gradients of parameterized quantum evolutions &#x2014; how?</h3>
+<div id="outline-container-org597fc93" class="outline-3">
+<h3 id="org597fc93"><span class="section-number-3">2.2.</span> Gradients of parameterized quantum evolutions &#x2014; how?</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 <div style="color:gray;">
@@ -395,8 +404,8 @@ How are gradients of parameterized quantum evolutions obtained using state of th
 </p>
 </div>
 
-<div id="outline-container-org22e2021" class="outline-4">
-<h4 id="org22e2021"><span class="section-number-4">2.2.1.</span> Symmetric Difference Quotient (SDQ)</h4>
+<div id="outline-container-orgcec8a75" class="outline-4">
+<h4 id="orgcec8a75"><span class="section-number-4">2.2.1.</span> Symmetric Difference Quotient (SDQ)</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <p>
 <div style="color:gray;">
@@ -425,8 +434,8 @@ reduction in bias is paid for by an increase in variance of equal magnitude.
 </div>
 </div>
 
-<div id="outline-container-orgd57f4b5" class="outline-4">
-<h4 id="orgd57f4b5"><span class="section-number-4">2.2.2.</span> Shift rules</h4>
+<div id="outline-container-orga7780a8" class="outline-4">
+<h4 id="orga7780a8"><span class="section-number-4">2.2.2.</span> Shift rules</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <p>
 <div style="color:gray;">
@@ -442,15 +451,15 @@ estimated by updating only 𝜽ⱼ.
 </p>
 
 <p>
-In contrast to SDQ, shift rules (<a href="#citeproc_bib_item_8">Wierichs et al. 2021</a>) generally can lead to unbiased
+In contrast to SDQ, shift rules (<a href="#citeproc_bib_item_10">Wierichs et al. 2021</a>) generally can lead to unbiased
 estimators while at the same achieving the minimum possible variance that any unbiased estimator for the
 derivative must have (<a href="#citeproc_bib_item_5">Theis 2021</a>).
 </p>
 </div>
 </div>
 
-<div id="outline-container-org53da42e" class="outline-4">
-<h4 id="org53da42e"><span class="section-number-4">2.2.3.</span> Banchi-Crooks' method</h4>
+<div id="outline-container-orgc12e7c3" class="outline-4">
+<h4 id="orgc12e7c3"><span class="section-number-4">2.2.3.</span> Banchi-Crooks' method</h4>
 <div class="outline-text-4" id="text-2-2-3">
 <p>
 Banchi and Crooks have proposed a method that they call a "stochastic approximate shift rule"
@@ -458,10 +467,10 @@ Banchi and Crooks have proposed a method that they call a "stochastic approximat
 </p>
 
 <p>
-The advantage of their method is the following: While the standard parameter shift rules of the <a href="#orgd57f4b5">previous
+The advantage of their method is the following: While the standard parameter shift rules of the <a href="#orga7780a8">previous
 section</a> work only in cases of standard quantum evolutions of the form 𝑒ⁱᶿᴬ &#x2014; which are typically found in
 digital quantum computers &#x2014; Banchi &amp; Crooks' method can work with quantum evolutions that are typically
-found in analog quantum computers (see <a href="#orgc5be573">2.3</a> below).
+found in analog quantum computers (see <a href="#orge862161">2.3</a> below).
 </p>
 
 <p>
@@ -473,8 +482,8 @@ decade, this is a notable drawback.
 </div>
 </div>
 
-<div id="outline-container-orgbbc3136" class="outline-4">
-<h4 id="orgbbc3136"><span class="section-number-4">2.2.4.</span> Simultaneous Perturbation Stochastic Approximation (SPSA)</h4>
+<div id="outline-container-org56b85c1" class="outline-4">
+<h4 id="org56b85c1"><span class="section-number-4">2.2.4.</span> Simultaneous Perturbation Stochastic Approximation (SPSA)</h4>
 <div class="outline-text-4" id="text-2-2-4">
 <p>
 Both the vanilla SDQ and shift rules methods have the disadvantage that they need to be applied to each
@@ -496,8 +505,8 @@ advantage in reducing the number of shots in Stochastic Gradient Descent.
 </div>
 </div>
 
-<div id="outline-container-orgf926028" class="outline-4">
-<h4 id="orgf926028"><span class="section-number-4">2.2.5.</span> Conclusion</h4>
+<div id="outline-container-org8db9499" class="outline-4">
+<h4 id="org8db9499"><span class="section-number-4">2.2.5.</span> Conclusion</h4>
 <div class="outline-text-4" id="text-2-2-5">
 <p>
 Due to low variance and absence of bias, shift rules are the gold standard for derivative computations.  But
@@ -512,7 +521,7 @@ evolution beyond changing parameter values.
 </p>
 
 <p>
-Moreover, numerical simulations (<a href="#citeproc_bib_item_7">Theis 2023</a>, source code is available) have shown that the
+Moreover, numerical simulations (<a href="#citeproc_bib_item_8">Theis 2023</a>, source code is available) have shown that the
 method invented at the University of Tartu has smaller bias than Banchi-Crooks' method &#x2014; while quantum
 hardware constraints and variance stay the same.  (Indeed, the method is in principle unbiased, biases only
 result from limitations in the quantum hardware.)
@@ -521,8 +530,8 @@ result from limitations in the quantum hardware.)
 </div>
 </div>
 
-<div id="outline-container-orgc5be573" class="outline-3">
-<h3 id="orgc5be573"><span class="section-number-3">2.3.</span> Analog quantum computers (aka quantum simulators)</h3>
+<div id="outline-container-orge862161" class="outline-3">
+<h3 id="orge862161"><span class="section-number-3">2.3.</span> Analog quantum computers (aka quantum simulators)</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 <div style="color:gray;">
@@ -552,15 +561,15 @@ hopes for pre-fault-tolerant commercial quantum advantage.
 </p>
 
 <p>
-In contrast to the previously known shift rules for quantum circuits, my method (<a href="#citeproc_bib_item_6">Theis 2022</a>) works
+In contrast to the previously known shift rules for quantum circuits, my method (<a href="#citeproc_bib_item_6">Theis 2022a</a>) works
 well with typical situation in an analog quantum computer: The part of the Hamiltonian that expresses a
 parameter under consideration is active simultaneously with other, non-commuting parts.
 </p>
 </div>
 
 
-<div id="outline-container-org819630d" class="outline-4">
-<h4 id="org819630d"><span class="section-number-4">2.3.1.</span> Rydberg atom arrays and the Rydberg Blockade                                  <a id="org2827d1d"></a></h4>
+<div id="outline-container-org4570d7f" class="outline-4">
+<h4 id="org4570d7f"><span class="section-number-4">2.3.1.</span> Rydberg atom arrays and the Rydberg Blockade                                  <a id="org2be78b4"></a></h4>
 <div class="outline-text-4" id="text-2-3-1">
 <p>
 <div style="color:gray;">
@@ -604,8 +613,8 @@ atoms within this decade still rest on analog simulators.
 </div>
 </div>
 
-<div id="outline-container-org86ac3f7" class="outline-4">
-<h4 id="org86ac3f7"><span class="section-number-4">2.3.2.</span> Other analog simulators</h4>
+<div id="outline-container-org7396352" class="outline-4">
+<h4 id="org7396352"><span class="section-number-4">2.3.2.</span> Other analog simulators</h4>
 <div class="outline-text-4" id="text-2-3-2">
 <p>
 Couplers between qubits in superconducting circuits can be used in an analog way, which is exploited, e.g., in
@@ -625,32 +634,109 @@ whether analog quantum computing is still pursued on trapped ions at all.
 </div>
 
 
-<div id="outline-container-org924f9b2" class="outline-2">
-<h2 id="org924f9b2"><span class="section-number-2">3.</span> <span class="todo TODO">TODO</span> How is my invention better than the other methods?</h2>
+<div id="outline-container-org37a6c2e" class="outline-2">
+<h2 id="org37a6c2e"><span class="section-number-2">3.</span> Numerical simulations</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-(<a href="#citeproc_bib_item_6">Theis 2022</a>)
+Basic facts in signal processing suggest that the Nyquist shift rule might perform badly if the following two
+factors occur together:
+</p>
+
+<ol class="org-ol">
+<li>The quantum evolution whose derivative is to be taken contains strong contributions of low (non-zero)
+frequencies;</li>
+<li>The width of the range in which the parameter values can be taken is restricted through constraints imposed
+by the quantum device.</li>
+</ol>
+
+<p>
+More accurately, the Nyquist shift rule can be expected to perform well if the width of the parameter range is
+inverse proportional to the lowest relevant frequency.
+</p>
+
+<p>
+As in today's quantum devices, the parameter range is typically restricted, we have conducted experiments how
+this &#x2014; and other &#x2014; constraints affect the relative performance of the method.
+</p>
+</div>
+
+<div id="outline-container-orge6f69a9" class="outline-3">
+<h3 id="orge6f69a9"><span class="section-number-3">3.1.</span> Comparison with Banchi-Crooks</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+To compare Nyquist shift rules with the method of Banchi &amp; Crooks (<a href="#citeproc_bib_item_3">Banchi and Crooks 2021</a>),
+we conducted numercial simulations in a generic setting.
+</p>
+
+<p>
+The accuracy (i.e., bias) of Banchi-Crooks' method can be tuned: A higher accuracy requires a larger width of
+the parameter range that needs to be accessed.  In our numerical experiments indicate that, we set up the
+Nyquist shift rule to operate in the same parameter range width as Banchi-Crooks' method.  The results indicate
+that, for all widths, the Nyquist shift rule has an order of magnitude better accuracy
+(<a href="#citeproc_bib_item_8">Theis 2023</a>).
+</p>
+
+<p>
+The source code for said experiments is available for inspection and further tests
+(<a href="#citeproc_bib_item_7">Theis 2022b</a>).
 </p>
 </div>
 </div>
 
+<div id="outline-container-org9b3fada" class="outline-3">
+<h3 id="org9b3fada"><span class="section-number-3">3.2.</span> Complementarity with Symmetric Difference Quotients</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Symmetric Difference Quotients have complementary behavior to the Nyquist shift rule: While the bias of the
+Nyquist shift deteriorates with the influence of low frequencies, the bias and variance of SDQ are proportional
+to the largest frequencies that occur.  The situation mirrors that of standard parameter shift rules, which
+outperform SDQ unless the largest frequency is large (in which case all methods require either large variance
+or large bias).
+</p>
 
+<p>
+In work that is currently being written down, we have compared SDQ and Nyquist shift rule in realistic
+simulations of Rydberg atom array analog quantum computing devices with typical current-day constraints
+(<a href="#citeproc_bib_item_9">Theis 2024</a>).  Not only the parameter ranges, but also other relevant constraints were taken into
+account in the numerical simulations.  The results of the simulations indicated that a comparison of the
+parameter range with an easily available bound on the frequency of the quantum evolution helps to recognize the
+quantum evolutions where the Nyquist shift rule yields a considerable improvement.
+</p>
 
+<p>
+The source code for said experiments will be made available for inspection and further tests.
+</p>
+</div>
 
+<div id="outline-container-orgb39ba3c" class="outline-4">
+<h4 id="orgb39ba3c"><span class="section-number-4">3.2.1.</span> Hardware-software co-design</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+The work just described revealed an opportunity to improve the system performance of the analog quantum
+computer by co-designing with the gradient-estimation method: An increase in the width of the parameter ranges
+leads to improved performance of the Nyquist gradient estimator.  Gradient estimation is a critical factor
+influencing the efficiency of training Quantum Neural Networks or optimizing Quantum Approximate Optimization
+Algorithm models.
+</p>
+</div>
+</div>
+</div>
+</div>
 
-
-<div id="outline-container-orgcab9aae" class="outline-2">
-<h2 id="orgcab9aae"><span class="section-number-2">4.</span> Bibliography</h2>
+<div id="outline-container-org7bcb045" class="outline-2">
+<h2 id="org7bcb045"><span class="section-number-2">4.</span> Bibliography</h2>
 <div class="outline-text-2" id="text-4">
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Abbas, Amira, Robbie King, Hsin-Yuan Huang, William J. Huggins, Ramis Movassagh, Dar Gilboa, and Jarrod R. McClean. 2023. “On Quantum Backpropagation, Information Reuse, and Cheating Measurement Collapse.” <i>Preprint Arxiv:2305.13362</i>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Abbas, Amira, Robbie King, Hsin-Yuan Huang, William J. Huggins, Ramis Movassagh, Dar Gilboa, and Jarrod R. McClean. 2023. “On Quantum Backpropagation, Information Reuse, and Cheating Measurement Collapse.” <i>Preprint Arxiv:2305.13362</i>. <a href="https://doi.org/10.48550/arXiv.2305.13362">https://doi.org/10.48550/arXiv.2305.13362</a>.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Babbush, Ryan, and Hartmut Neven. 2016. “Training Quantum Evolutions Using Sublogical Controls.” US 10,275,717 B2; US 11,055,626 B2; US 11,562,285 B2.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Banchi, Leonardo, and Gavin E. Crooks. 2021. “Measuring Analytic Gradients of General Quantum Evolution with the Stochastic Parameter Shift Rule.” <i>Quantum</i> 5 (January): 386. <a href="https://doi.org/10.22331/q-2021-01-25-386">https://doi.org/10.22331/q-2021-01-25-386</a>.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Gil Vidal, Javier, and Dirk Oliver Theis. 2020. “Input Redundancy for Parameterized Quantum Circuits.” <i>Frontiers in Physics</i> 8: 297. <a href="https://doi.org/10.48550/arXiv.1901.11434">https://doi.org/10.48550/arXiv.1901.11434</a>.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_5"></a>Theis, Dirk Oliver. 2021. “Optimality of Finite-Support Parameter Shift Rules for Derivatives of Variational Quantum Circuits.” <i>Preprint</i>. <a href="https://doi.org/10.48550/arXiv.2112.14669">https://doi.org/10.48550/arXiv.2112.14669</a>.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>———. 2022. “Shift Rule for Gradient Determination in Parameterised Quantum Evolutions.” US17/856,357; PCT/EP2023/068112.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_7"></a>———. 2023. “``Proper’’ Shift Rules for Derivatives of Perturbed-Parametric Quantum Evolutions.” <i>Quantum</i> 7: 1052. <a href="https://doi.org/10.22331/q-2023-07-11-1052">https://doi.org/10.22331/q-2023-07-11-1052</a>.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_8"></a>Wierichs, David, Josh Izaac, Cody Wang, and Cedric Yen-Yu Lin. 2021. “General Parameter-Shift Rules for Quantum Gradients.” <i>Preprint</i>. <a href="https://doi.org/10.48550/arXiv.2107.12390">https://doi.org/10.48550/arXiv.2107.12390</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>———. 2022a. “Shift Rule for Gradient Determination in Parameterised Quantum Evolutions.” US17/856,357; PCT/EP2023/068112.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_7"></a>———. 2022b. “Supplementary Material for ’``Proper’’ Shift Rules…’.” Julia Notebooks. <a href="https://dojt.github.io/storage/nyquist/">https://dojt.github.io/storage/nyquist/</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_8"></a>———. 2023. “``Proper’’ Shift Rules for Derivatives of Perturbed-Parametric Quantum Evolutions.” <i>Quantum</i> 7: 1052. <a href="https://doi.org/10.22331/q-2023-07-11-1052">https://doi.org/10.22331/q-2023-07-11-1052</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_9"></a>———. 2024. “Derivatives of Parameterized Bang-Bang Pulses in Rydberg-Array Analog Quantum Computers.”</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_10"></a>Wierichs, David, Josh Izaac, Cody Wang, and Cedric Yen-Yu Lin. 2021. “General Parameter-Shift Rules for Quantum Gradients.” <i>Preprint</i>. <a href="https://doi.org/10.48550/arXiv.2107.12390">https://doi.org/10.48550/arXiv.2107.12390</a>.</div>
 </div>
 <hr />
 </div>
@@ -659,7 +745,7 @@ whether analog quantum computing is still pursued on trapped ions at all.
 <div id="postamble" class="status">
 <p class="date">Date: Wed Feb  7 12:34:09 CET 2024</p>
 <p class="author">Author: Dirk Oliver Theis, University of Tartu, Estonia</p>
-<p class="date">Created: 2024-03-06 Wed 16:19</p>
+<p class="date">Created: 2024-03-07 Thu 18:26</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

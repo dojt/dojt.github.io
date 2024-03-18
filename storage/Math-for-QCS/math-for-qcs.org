@@ -21,7 +21,7 @@
      - Define projector as $\sum_{\textrm{some } j} \ketbra{b_j}{b_j}$ in and use it in [[§HS][§ Hilbert Space]] before introducing it in [[§Op][§ Operators]]
 
 
-* Complex Numbers
+* ↘️ Complex Numbers
 ** Review of basic facts
 
     + Modulus and argument: $r\cdot e^{i\alpha}$
@@ -34,7 +34,7 @@
 ** TODO $\RR$- and $\CC$- linearity
 
 
-* Finite-Dimensional Hilbert space                                              <<§HS>>
+* ↘️ Finite-Dimensional Hilbert space                                              <<§HS>>
 ** Kets & bras
 *** ✅ Inner products and Hilbert space
 
@@ -68,12 +68,12 @@
 
 
 * CONT Operators on Finite-Dim Hilbert Space                                         <<§Op>>
-** Operators and Matrices
-** Adjoint
-** Various facts
-*** ker/img
-** Special types of operators
-*** Endomorphisms
+** TODO Operators and Matrices
+** TODO Adjoint
+** CONT Various facts
+*** TODO ker/img
+** CONT Special types of operators
+*** CONT Endomorphisms
 **** CONT Normal operators
         + Definition ::
 
@@ -89,7 +89,7 @@
 ****** Positive operators
 ******* Projectors
 ***** Unitaries
-*** General domain and range space
+*** TODO General domain and range space
 **** Isometries
 **** Partial isometries
 

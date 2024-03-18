@@ -31,7 +31,7 @@
     + $\Re z$ = (z+z^*)/2$
     + $\Im z$ = (z-z^*)/2$
 
-** TODO $\RR$- and $\CC$- linearity
+** TODO $\RR\textrm{-}$ and $\CC$ -linearity
 
 
 * ↘️ Finite-Dimensional Hilbert space                                              <<§HS>>

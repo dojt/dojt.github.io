@@ -1,0 +1,114 @@
+#+TITLE:  Math for Quantum Computer Science
+#+AUTHOR: Dirk Oliver Theis, University of Tartu, Estonia
+#+EMAIL:  dotheis@ut.ee
+#+DATE:   Mon Mar 18 10:13:56 EET 2024
+:SETUP:
+#+STARTUP: latexpreview
+#+STARTUP: show2levels
+#+BIBLIOGRAPHY: ../../DOT_LaTeX/dirks.bib
+#+SEQ_TODO: TODO DOING CONT ARGH ↘️ | 𝕽 REVIEW ✅
+:END:
+:LATEX_DEFS:
+#+LaTeX_HEADER:\newcommand{\cL}{\mathcal{L}}
+#+LaTeX_HEADER:\newcommand{\sH}{\mathscr{H}}
+:END:
+
+* Ideas
+
+   + $\sum_j \ketbra{b_j}{b_j}$:
+     - Define $\ketbra{\phi}{\psi}$ based on $\cip{\cdot}{\cdot}$
+     - Take $\sum_{\textrm{all } j} \ketbra{b_j}{b_j} = 1$ as basis for development of matrices etc.
+     - Define projector as $\sum_{\textrm{some } j} \ketbra{b_j}{b_j}$ in and use it in [[§HS][§ Hilbert Space]] before introducing it in [[§Op][§ Operators]]
+
+
+* Complex Numbers
+** Review of basic facts
+
+    + Modulus and argument: $r\cdot e^{i\alpha}$
+    + $|z|^2 = z^* z$
+    + $1/z = z^*/(z^* z)$
+
+    + $\Re z$ = (z+z^*)/2$
+    + $\Im z$ = (z-z^*)/2$
+
+** TODO $\RR$- and $\CC$- linearity
+
+
+* Finite-Dimensional Hilbert space                                              <<§HS>>
+** Kets & bras
+*** ✅ Inner products and Hilbert space
+
+    + Definition (real)     :: Let $V$ be a $\RR$-vector space. A $s\colon V\times V\to\RR$ is called /inner
+      product/ if it is symmetric, bilinear, and positive definite
+      - /Symmetric/ :: $s(x,y) = s(y,x)$ for all $x,y\in V$
+      - /Bilinear/  :: For all $x\in V$ the mapping $y\mapsto s(x,y)$ is linear; for all $y\in V$ the mapping
+        $x\mapsto s(x,y)$ is linear.
+      - /Positive definite/ :: $s(x,x) \in \RR_+$ for all $x \in V$; and: $s(x,x)=0 \rightarrow x=0$ for all $x\in V$.
+
+    + Definition (complex)  :: Let $V$ be a $\CC$-vector space. A $\sigma\colon V\times V\to\CC$ is called /inner
+      product/ if it is conjugate-symmetric, sesqui-linear, positive definite.
+      - /Conjugate-symmetric/ :: $\sigma(x,y) = s(y,x)$ for all $x,y\in V$
+      - /Sesqui-linear/  :: For all $x\in V$ the mapping $y\mapsto \sigma(x,y)$ is linear; for all $y\in V$ the
+        mapping $x\mapsto s(x,y)$ is anti-linear[fn:1].
+
+
+    A /Hilbert space/ is a complex vector space with a fixed inner product.
+
+[fn:1] Figure out what that means by using conjugate-symmetry and the linearity in the left argument.
+******* CONT Exercises
+
+         1) Let $\sH$ be a Hilbert space, and $\psi\in\sH$.  Show: $\psi = 0$ iff $\forall\phi\in\sH\colon
+            \cip{\phi}{\psi}=0$.
+         2) Let $\sH$ be a Hilbert space, and $\psi_1,\psi_2\in\sH$.  Show: $\psi_1 = \psi_2$ iff $\forall\phi\in\sH\colon
+            \cip{\phi}{\psi_1}=\cip{\phi}{\psi_2}$.
+
+** TODO ONB
+** TODO $\sum \ketbra{b_j}{b_j} = 1$
+** TODO Projectors and orthogonal subspaces
+
+
+* CONT Operators on Finite-Dim Hilbert Space                                         <<§Op>>
+** Operators and Matrices
+** Adjoint
+** Various facts
+*** ker/img
+** Special types of operators
+*** Endomorphisms
+**** CONT Normal operators
+        + Definition ::
+
+            #+BEGIN_QUOTE
+            A linear operator $A \in \cL(\sH)$ is called /normal/ if $[A,A^\dag]=0$, i.e., it commutes with its own
+            adjoint.
+            #+END_QUOTE
+
+        + Consequences :: Prove as exercise (don't use spectral theory):
+          1) Kernel $\orth$ Image
+          2) 
+***** Hermitian operators
+****** Positive operators
+******* Projectors
+***** Unitaries
+*** General domain and range space
+**** Isometries
+**** Partial isometries
+
+
+* TODO Spectral Theory                                                               <<§ST>>
+
+
+* License
+Copyright on thise document lies with
+
+- *University of Tartu, Estonia*
+
+and with the author,
+
+- *Dirk Oliver Theis, University of Tartu, Estonia.*
+
+This document is released under CC-BY-SA license.  Roughly, this means that you may copy, distribute, and cite from
+it under the conditions that (1) you attribute it to the copyright holders and (2) you don't modify it in any
+essential way.
+# Local Variables:
+# fill-column: 115
+# End:

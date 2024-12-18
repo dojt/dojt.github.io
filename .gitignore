@@ -4,3 +4,6 @@
 # Apple shit
 .DS_Store
 ltximg/
+/storage/Math-for-QCS/defs.common.tex
+/storage/Math-for-QCS/defsN.amsart.tex
+/storage/Math-for-QCS/org-latex.sty

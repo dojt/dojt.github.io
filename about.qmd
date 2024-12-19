@@ -1,10 +1,10 @@
 ---
-title: "About"
+title: "Info"
 ---
 
-# Hi, there!
+# Tere!
 
 [Dirk Oliver Theis](https://quantum-computing.ut.ee/homepage/dot.html)<br>
-Assoc. Prof. Theoretical Computer Science<br>
-University of Tartu, Estonia
+Teoreetilise informaatika kaasprofessor<br>
+Tartu Üliikool, Eesti
 

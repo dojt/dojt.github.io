@@ -1,0 +1,21 @@
+---
+title: "Kvantmasinõpe uudistes"
+author: "Let's Blog!"
+date: "2024-09-02"
+---
+
+Minu isiklik arvamus kvantarvutitel põhineva masinõppe ja tehisintellekti kohta on mõnevõrra segane.  Ühelt poolt on tõestatud, et kvantarvutid ületavad eksponentsiaalselt klassikalisi arvuteid, kui tegemist on *kvantandmete* õppimisega ([Huang et al. 2022](https://doi.org/10.1126/science.abn7293)).  Vau! Kuigi, see pole tegelikult üllatav, eks ole? Kuidas saakski kvantandmeid klassikalistele arvutitele kättesaadavaks teha — see pole lihtsalt võimalik.  Muidugi, saab salvestada [tomograafia andmeid](https://en.wikipedia.org/wiki/Quantum_tomography).  Bang! Eksponentsiaalne üldkulu! Või saab kasutada [klassikalist varju metoodikat](https://en.wikipedia.org/wiki/Classical_shadow), mis piirab kvantandmed, millele teie õpe põhineb, "peaaegu klassikaliste kvantandmetega", nii-öelda.
+
+Teiselt poolt tundus mulle varem, et kvantmasinõpe ja kvantne tehisintellekt *klassikaliste* andmete põhjal on üks tõeliselt ülehinnatud valdkond tänapäeva kvantpüüdlustes: inimesed kirjutavad kvantprogramme ja avaldavad uuringuid ilma vähimagi metodoloogilise ettekujutuseta sellest, kuidas tõestada, et kui pisike kvantarvuti asendada suurega, tooks see kaasa midagi paremat kui see, mida inimesed saavad teha tänapäeva klassikalise masinõppe/tehisintellekti tehnoloogiaga.  Aga tundub, et ma eksisin.
+
+![James Manyika Tallinna digitaaltippkohtumisel 2017 (Wikipedia)](Tallinn_Digital_Summit_Fireside_chat_with_James_Manyika.jpg)
+
+James Manyika, Google'i teaduse, tehnoloogia ja ühiskonna vanem asepresident, andis intervjuu Financial Timesile, mis avaldati täna.  Nüüd, Manyika on Google'i mees, kelle ülesandeks oleks lõputult rääkida LLMide, tugevdusõppe jne lubadustest.  Kuid ta otsustas teemat muuta: kvantarvutite suunas.
+
+> Manyika suunab vestluse kvantarvutitele.  „Me tegelikult usume, et kvantarvutid võimaldavad meil tehisintellekti ehitada teisiti.  Jääge kuuldele — sel aastal on oodata olulisi verstapostiuudiseid.  See, mis veel juhtunud ei ole...  on see, et keegi pole näidanud arvutust, mida põhimõtteliselt ei saaks teha klassikalise arvutiga.”[^1]
+
+Ta näib vihjavat, et Google suudab näidata nn "Quantum Advantage" masinõppes / tehisintellektis.  Kuid andkem oma sisemisele skeptikule kahtluse kasuks ja eeldagem, et Manyika viimane lause oli puhtalt selgitav: Artikkel räägib Geminist ja teistest tööriistadest ning Manyika räägib selle tehnoloogia täiustamisest kvantarvutite abil — sel aastal.  See oleks märkimisväärne!
+
+
+[^1]: [![Financial Times Sep 2, 2024](Financial-Times--Henry-Mance-Interview.png)](https://ft.pressreader.com/article/281728389872623)
+

@@ -1,0 +1,12 @@
+---
+title: "Kvantarvutusblogi"
+listing:
+  contents: kvantblog
+  sort: "date desc"
+  type: grid
+  categories: false
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---

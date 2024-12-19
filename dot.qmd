@@ -1,0 +1,75 @@
+---
+title: "Homepage of Dirk Oliver Theis"
+---
+
+[Dr. rer. nat. habil.]{.small}\
+Dirk Oliver Theis\
+Associate Professor
+
+- [Diplom](https://en.wikipedia.org/wiki/Diplom#Germany) in mathematics, Heidelberg (8/2002)
+- [Dr. rer.nat.](https://en.wikipedia.org/wiki/Dr._rer._nat.), [Heidelberg](https://www.uni-heidelberg.de/en)
+  (12/2005, *summa cum laude*[🔗](https://en.wikipedia.org/wiki/Latin_honors#Germany))
+- [Habilitation](https://en.wikipedia.org/wiki/Habilitation#Germany) to
+  [Priv.-Doz.](https://en.wikipedia.org/wiki/Privatdozent) in mathematics, Magdeburg (5/2012)
+- Assoc. Prof. in Theoretical Computer Science[🔗](https://en.wikipedia.org/wiki/Theoretical_computer_science) at
+  [Uni Tartu](https://en.wikipedia.org/wiki/University_of_Tartu)[,
+  [Estonia](https://en.wikipedia.org/wiki/Estonia)[, EU, Earth]{.small}]{.small} (since 3/2013)
+
+## Research
+
+Who I am: *Theoretical computer science, applicable mathematics.*\
+What I do: *Quantum computing.*
+
+[Theoretical computer science and mathematics are about proving theorems, which is what I (try to) do most of the
+time. To assess the practical utility of results that I obtain on paper, I also often write proof-of-concept source
+code. Apart from pure theory, I\'m fond of compiler engineering: the closer to the metal the better. With my
+research, I aim to contribute to realizing quantum computing within this decade.]{.small}
+
+My recent papers:
+
+- [On SciRate](https://scirate.com/DOT)
+- My [arXiv tag](http://arxiv.org/a/theis_d_1)
+- My [ORCID stub](https://orcid.org/0000-0002-9362-0748) [will, at some point in the future 🙄, offer a selection
+  of my favorite recent papers & preprints]{.small}
+- [.](https://patents.google.com/?inventor=Dirk+Oliver+THEIS)
+
+## Teaching
+##### Current PhD students
+
+- Evgenii Dolzhkov: Quantum (and quantum inspired) algorithms for optimization
+- [Shahla Novruzova](https://quantum-computing.ut.ee/homepage/shahla.html): Tbd
+
+##### Past students...
+
+... in quantum computing:
+
+- [Anabel Ovide González](https://www.linkedin.com/in/anabel-ovide-gonz%C3%A1lez-3723021a7/) *Multicore quantum computers: Mapping analysis of quantum algorithms* (MSc 2022)
+- [Handy Kurniawan](https://www.linkedin.com/in/handy-kurniawan/) *A quantum language compiler* (MSc 2022)
+- [Alejandro Villoria Gonzalez](https://www.linkedin.com/in/alejandro-villoria-gonz%C3%A1lez-3161611a1/) *Verification of AutoCCZ quantum states by ZX calculation* (MSc 2022)
+- Evgenii Dolzhkov, *Using abstract harmonic analysis and Lie group theory to study parameterized quantum circuits* (MSc 2020)
+- Andrew Lei, *Quantum computing methods for machine learning* (MSc 2020)
+- [Mykhailo Nitsenko](https://forte.delfi.ee/artikkel/90113537/ma-lihtsalt-ei-kujutanud-ette-tartu-ulikoolis-kaitsti-esimene-kvantarvutuse-teemaline-magistritoo) (MSc 2020)
+
+##### Courses
+
+Teaching in Fall 2024:
+
+- `LTAT.04.004` **Quantum Seminar** (3 ECTS)
+
+Quantum computing courses I have taught in the past include:
+
+- `MTAT.05.118` *Quantum Algorithms* [(6 ECTS; basic quantum algorithms)]{.small}
+- `MTAT.07.024` *Quantum Cryptography* [(6 ECTS)]{.small}
+- `LTAT.00.015a` *Modern Quantum Algorithms* [(6 ECTS; LCU, QSVT, etc.)]{.small}
+- `LTAT.00.015b` *Quantum Error Correction & Fault Tolerant Quantum Computing* [(6 ECTS; stabilizer codes, surface
+  codes, fault tolerant QC)]{.small}
+- `LTAT.00.015c` *Quantum Information Processing with Photons* [(6 ECTS; measurement-based quantum computing on
+  photonic QC devices)]{.small}
+
+## Contact
+
+➜ [LinkedIn](https://www.linkedin.com/in/dirk-oliver-theis-178b8488/)\
+➜ `dotheis` [[*dot*]{.small}]{.small} `UTartu` [*at* `ƍ📧` *dot* `com`]{.small}\
+      [(I lose some of the mails sent to my @ut.ee-address.)]{.small}
+
+

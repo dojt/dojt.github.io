@@ -1,0 +1,31 @@
+---
+title: "Kvantarvutuste viga parandava kvantarvutuse elluviimine 2D-s"
+author: "Let's Blog!"
+date: "2024-07-14"
+---
+
+Kvantarvutuste viga parandavad koodid on praegu suureks uurimisvaldkonnaks, kuna need võivad olla olulised tõrkekindlate kvantarvutite ehitamisel. Üks kood paistab aga teistest rohkem silma – Surface Code. Seni on kvantarvutuste kogukonnas valitsenud peaaegu üksmeelne arvamus, et esimesed tõrkekindlad kvantarvutid kasutavad just seda koodi. Kuigi see ei pruugi enam olla nii (vaata [IBM-i artiklit](https://www.nature.com/articles/s41586-024-07107-7) ja [QuEra-i artiklit](https://www.nature.com/articles/s41586-023-06927-3)), on Surface Code endiselt märkimisväärne ja vajab arutelu. Selles lühikeses blogipostituses uurime, kuidas seal CNOT-väravat realiseerida.
+
+Kõigepealt tuleb mainida, et Surface Code’il on mitmeid variante ning CNOT-väravate teostamiseks on erinevaid meetodeid. Siin räägime kõige lõbusamast viisist: võrkkirurgiast.
+
+![](operation.jpg)
+
+Võrkkirurgia puhul elab teie kood suurema osa ajast ristkülikukujulisel lapil 2D ruudustikul. Võimalikud on ka keerukamad lapid, näiteks võib kood minna ümber nurkade jne, kui olla piisavalt ettevaatlik. Oluline omadus Surface Code’i puhul on see, et iga koodilapp sisaldab ühte “loogilist” kubitti.
+
+Ristkülikukujulised lapid 2D ruudustikul? Kui see kõlab nagu mõistatusmäng, siis te ei eksi! Tegelikult toimuvad loogilise kubiti või mitme loogilise kubiti (mitmes lapis) operatsioonid järgmiselt:
+
+(a) Lappide lõikamine,
+(b) Lappide kokkuõmblemine,
+(c) Lappide ümberpaigutamine.
+
+On ka mõned peenemad toimingud, kuid need kolm on piisavad CNOT-värava teostamiseks, mis toimub järgmiselt:
+
+1. Kubitt 1 lõigatakse kaheks pooleks;
+2. Üks pooltest viiakse kubitile 2 kõrvale;
+3. Kubitt 2 ja see kubitt 1 pool õmmeldakse kokku.
+
+Siin on mõned peamurdmised. Esiteks, kui kubitt 1 lõigatakse, saadakse kaks lappi ehk kaks kubitti, näiteks ülemine kubitt ja alumine kubitt. Kubittide olekuid ei saa kopeerida (No-Cloning Teoreem!), kuid siin seda ei tehta. Kõik, mida me tahame, on: kui kubitt 1 on olekus |0⟩, siis ülemine kubitt on olekus |0⟩ ja alumine kubitt samuti olekus |0⟩. Sama kehtib ka oleku |1⟩ kohta. Seda pole raske mõista.
+
+Teises etapis on aga peenus: Kui õmblen kokku kaks lappi, millest igaüks sisaldab ühe kubiti, siis lõpptulemusena saan ühe lapi ehk ühe kubiti. Seega viib see toiming üldiselt ühe kubiti vabadusastme kadumiseni, ja seega, kuna 2 = 1 + 1, peab sellest protsessist väljuma klassikaline bitt. Selles konkreetses juhtumis on aga see klassikaline bitt täiesti juhuslik ega anna algsete kahe kubiti kohta mingit teavet. Seega peame lihtsalt mõõtmistulemuse kubititesse tagasi panema. Seda saab teha kas rakendades ühe loogilise kubiti jaoks bitt-pöörde (või faasi-pöörde — sõltub sellest, kuidas täpselt jagasime ja ühendasime) või saame värskendada klassikalise juhtarvuti viitekaadrit.
+
+_Muidugi olen jätnud siin välja palju detaile, kuid point on see: Peale kääride ja liimi hõlmab võrkkirurgia enamasti bitide ja kubittide lugemist. Kui kõik kvantarvutuste viga parandavad koodid oleksid sama lõbusad!_

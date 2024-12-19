@@ -4,7 +4,7 @@ title: "About"
 
 # Hi, there!
 
-[Dirk Oliver Theis](dot.qmd)<br>
+[Dirk Oliver Theis](https://quantum-computing.ut.ee/homepage/dot.html)<br>
 Assoc. Prof. Theoretical Computer Science<br>
 University of Tartu, Estonia
 

@@ -13,3 +13,8 @@
 
    If they accept my booking later than 4h before departure, I'll have
    to sue them.  I'll win, but it's a pain in the ass.
+
+#### Kiwi.com  💀💀💀
+ - They don't give you your booking code (Buchungsreferenz) so you
+   cannot check in by yourself.  Instead, they force you to download
+   their app.

@@ -22,3 +22,13 @@
    Correction: The booking code is buried deep in one of the PDFs.
    Now I already filled in my information for Check-In -- which the
    fineprint says costs extra money.  This is basically **fraud**.
+
+
+## Internet WiFi Routers
+
+### Zyxel
+ - ... has no plans to release patches for two zero-days under attack
+   and is advising customers to replace vulnerable routers.  The
+   company says these devices have been “EOL for years” -- but the
+   devices are not on Zyxel’s EOL page, and some are still available
+   to buy.   techcrunch.com Feb 5, 2025

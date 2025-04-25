@@ -39,3 +39,7 @@
 
 Advokaadibüroo Tarmo Pilv & Partnerid: Sent long email in April 2025
 about apartment rental dispute, which was urgent — never replied.
+
+### Kõrgesaar
+
+Kõrgesaar & Laasik: Ketita inquiry back in 2020 — jawdroppingly incompetent.

@@ -2,6 +2,7 @@
 * Documents for lawyer
 ** [1/1] Additional documents
 + [X] [[file+emacs:./id-card.jpg][ID-card]]
++ [X] [[file+emacs:./reg_uid17016177_ronr4737703.pdf][Old ownership record]]
 
 ** [4/5] Case documents
 

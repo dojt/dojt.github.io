@@ -32,3 +32,10 @@
    company says these devices have been “EOL for years” -- but the
    devices are not on Zyxel’s EOL page, and some are still available
    to buy.   techcrunch.com Feb 5, 2025
+
+## Lawyers
+
+### Tarmo Pilv
+
+Advokaadibüroo Tarmo Pilv & Partnerid: Sent long email in April 2025
+about apartment rental dispute, which was urgent — never replied.

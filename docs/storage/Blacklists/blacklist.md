@@ -43,3 +43,9 @@ about apartment rental dispute, which was urgent — never replied.
 ### Kõrgesaar
 
 Kõrgesaar & Laasik: Ketita inquiry back in 2020 — jawdroppingly incompetent.
+
+### Lawyers *Whitelist*
+The following responded to my letter about the rental dispute:
+
+* Piret Pallo 👍
+* LMP 👍
